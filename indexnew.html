@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manish | Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-800 shadow-lg z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-blue-400">Manish Gahlot</h1>
+      <div class="space-x-6">
+        <a href="#about" class="hover:text-blue-400">About</a>
+        <a href="#projects" class="hover:text-blue-400">Projects</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-6">
+    <h1 class="text-5xl font-bold">Hi, I’m <span class="text-blue-400">Manish</span> 👋</h1>
+    <p class="mt-4 text-xl text-gray-300">Web & App Developer | Laravel • PHP • React</p>
+    <div class="mt-6 space-x-4">
+      <a href="#projects" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg">View Projects</a>
+      <a href="#contact" class="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">About Me</h2>
+      <p class="text-lg text-gray-300">
+        I am a passionate developer skilled in Laravel, PHP, React, and MySQL.  
+        I enjoy building modern, responsive, and user-friendly applications.
+      </p>
+      <div class="flex flex-wrap justify-center mt-6 gap-3">
+        <span class="bg-gray-700 px-4 py-2 rounded">Laravel</span>
+        <span class="bg-gray-700 px-4 py-2 rounded">React</span>
+        <span class="bg-gray-700 px-4 py-2 rounded">PHP</span>
+        <span class="bg-gray-700 px-4 py-2 rounded">MySQL</span>
+        <span class="bg-gray-700 px-4 py-2 rounded">Tailwind</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <!-- Project Card -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+        <img src="https://via.placeholder.com/400x200" alt="Project 1" class="rounded mb-4">
+        <h3 class="text-xl font-semibold">News Portal</h3>
+        <p class="text-gray-400 text-sm mt-2">Laravel + MySQL based CMS for publishing news.</p>
+        <div class="mt-4 flex space-x-3">
+          <a href="#" class="text-blue-400 hover:underline">Live Demo</a>
+          <a href="#" class="text-gray-300 hover:underline">Code</a>
+        </div>
+      </div>
+      <!-- Project Card -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+        <img src="https://via.placeholder.com/400x200" alt="Project 2" class="rounded mb-4">
+        <h3 class="text-xl font-semibold">Travel Booking</h3>
+        <p class="text-gray-400 text-sm mt-2">Online booking system with payment integration.</p>
+        <div class="mt-4 flex space-x-3">
+          <a href="#" class="text-blue-400 hover:underline">Live Demo</a>
+          <a href="#" class="text-gray-300 hover:underline">Code</a>
+        </div>
+      </div>
+      <!-- Project Card -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+        <img src="https://via.placeholder.com/400x200" alt="Project 3" class="rounded mb-4">
+        <h3 class="text-xl font-semibold">Admin Dashboard</h3>
+        <p class="text-gray-400 text-sm mt-2">React + API powered analytics dashboard.</p>
+        <div class="mt-4 flex space-x-3">
+          <a href="#" class="text-blue-400 hover:underline">Live Demo</a>
+          <a href="#" class="text-gray-300 hover:underline">Code</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+    <form class="max-w-2xl mx-auto space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded bg-gray-700 text-white">
+      <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded bg-gray-700 text-white">
+      <textarea placeholder="Your Message" class="w-full px-4 py-3 rounded bg-gray-700 text-white"></textarea>
+      <button class="w-full bg-blue-500 hover:bg-blue-600 py-3 rounded">Send Message</button>
+    </form>
+    <div class="text-center mt-6 text-gray-400">
+      Or connect on:
+      <a href="https://github.com/" class="text-blue-400">GitHub</a> • 
+      <a href="https://linkedin.com/" class="text-blue-400">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-900 text-gray-500">
+    © 2025 Manish – All Rights Reserved
+  </footer>
+
+</body>
+</html>
