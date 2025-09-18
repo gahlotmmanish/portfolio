@@ -1,697 +1,359 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Manish Gahlot - Web Developer And App Developer</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Manish Gahlot" name="keywords">
-        <meta content="Manish Gahlot" name="description">
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manish | Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { 
+      darkMode: 'class',
+      theme: {
+        extend: {
+          screens: {
+            'xs': '475px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
+    .fade-in.show { opacity: 1; transform: translateY(0); }
+    
+    /* Mobile menu animation */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+    
+    .mobile-menu.open {
+      max-height: 500px;
+    }
+    
+    /* Hamburger menu */
+    .hamburger {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      position: relative;
+    }
+    
+    .hamburger-top,
+    .hamburger-middle,
+    .hamburger-bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background: #000;
+      transition: all 0.5s;
+    }
+    
+    .hamburger-middle {
+      transform: translateY(7px);
+    }
+    
+    .hamburger-bottom {
+      transform: translateY(14px);
+    }
+    
+    .open .hamburger-top {
+      transform: rotate(45deg) translateY(6px) translateX(6px);
+    }
+    
+    .open .hamburger-middle {
+      display: none;
+    }
+    
+    .open .hamburger-bottom {
+      transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    }
+    
+    .dark .hamburger-top,
+    .dark .hamburger-middle,
+    .dark .hamburger-bottom {
+      background: #fff;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500 font-sans">
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
-
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-        <link rel = "icon" href ="img/mobile_phone.png" type = "image/x-icon"> 
-    </head>
-
-    <body data-spy="scroll" data-target=".navbar" data-offset="51">
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Portfolio</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#service" class="nav-item nav-link">Service</a>
-                        <a href="#experience" class="nav-item nav-link">Experience</a>
-                        <a href="#price" class="nav-item nav-link">Price</a>
-                        <a href="#review" class="nav-item nav-link">Review</a>
-                        <a href="#team" class="nav-item nav-link">Portfolio</a>
-                    </div>
-                </div>
-            </div>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-100 dark:bg-gray-800 shadow-lg z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-4 sm:px-6">
+      <h1 class="text-xl sm:text-2xl font-bold text-blue-500">Manish.dev</h1>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-4 lg:space-x-6">
+        <a href="#about" class="hover:text-blue-500 text-sm lg:text-base">About</a>
+        <a href="#experience" class="hover:text-blue-500 text-sm lg:text-base">Experience</a>
+        <a href="#skills" class="hover:text-blue-500 text-sm lg:text-base">Skills</a>
+        <a href="#services" class="hover:text-blue-500 text-sm lg:text-base">Services</a>
+        <a href="#projects" class="hover:text-blue-500 text-sm lg:text-base">Projects</a>
+        <a href="#testimonials" class="hover:text-blue-500 text-sm lg:text-base">Testimonials</a>
+        <a href="#blog" class="hover:text-blue-500 text-sm lg:text-base">Blog</a>
+        <a href="#contact" class="hover:text-blue-500 text-sm lg:text-base">Contact</a>
+        <a href="resume.pdf" download class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-white text-sm">Resume</a>
+        <button id="themeToggle" class="px-3 py-1 rounded bg-blue-500 text-white hover:bg-blue-600">🌙</button>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center space-x-4">
+        <a href="resume.pdf" download class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-white text-sm">Resume</a>
+        <button id="themeToggleMobile" class="px-3 py-1 rounded bg-blue-500 text-white hover:bg-blue-600 text-sm">🌙</button>
+        <div id="hamburger" class="hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
         </div>
-        <!-- Nav Bar End -->
+      </div>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div id="mobileMenu" class="mobile-menu md:hidden bg-gray-100 dark:bg-gray-800">
+      <div class="px-4 pt-2 pb-4 space-y-2">
+        <a href="#about" class="block py-2 hover:text-blue-500">About</a>
+        <a href="#experience" class="block py-2 hover:text-blue-500">Experience</a>
+        <a href="#skills" class="block py-2 hover:text-blue-500">Skills</a>
+        <a href="#services" class="block py-2 hover:text-blue-500">Services</a>
+        <a href="#projects" class="block py-2 hover:text-blue-500">Projects</a>
+        <a href="#testimonials" class="block py-2 hover:text-blue-500">Testimonials</a>
+        <a href="#blog" class="block py-2 hover:text-blue-500">Blog</a>
+        <a href="#contact" class="block py-2 hover:text-blue-500">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4 pt-16">
+    <h1 class="text-4xl xs:text-5xl font-bold fade-in">Hi, I’m <span class="text-blue-500">Manish</span> 👋</h1>
+    <p class="mt-4 text-lg xs:text-xl text-gray-600 dark:text-gray-300 fade-in">Web & App Developer | Laravel • PHP • React</p>
+    <div class="mt-6 flex flex-col xs:flex-row gap-4 fade-in">
+      <a href="#projects" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg text-white">View Projects</a>
+      <a href="resume.pdf" download class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg text-white">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 xs:py-20 px-4 bg-gray-100 dark:bg-gray-800 fade-in">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl xs:text-3xl font-bold mb-6">About Me</h2>
+      <p class="text-base xs:text-lg text-gray-700 dark:text-gray-300">
+        I am a passionate developer skilled in Laravel, PHP, React, and MySQL.  
+        I enjoy building modern, responsive, and user-friendly applications.
+      </p>
+    </div>
+  </section>
+ 
+ <!-- Experience Section -->
+<section id="experience" class="py-16 xs:py-20 px-4 fade-in bg-gray-50 dark:bg-gray-800">
+  <h2 class="text-2xl xs:text-3xl font-bold text-center mb-8 xs:mb-10">Experience</h2>
+  <div class="max-w-4xl mx-auto space-y-6">
+    
+    <div class="p-4 xs:p-6 bg-white dark:bg-gray-700 rounded-xl shadow">
+      <h3 class="text-lg xs:text-xl font-semibold">Software Developer – XYZ Solutions</h3>
+      <p class="text-gray-600 dark:text-gray-300 text-sm xs:text-base">Jan 2022 – Present</p>
+      <p class="mt-2 text-gray-700 dark:text-gray-400 text-sm xs:text-base">
+        Worked on Laravel-based CRM system, integrated payment gateway, and optimized APIs for performance.
+      </p>
+    </div>
+
+    <div class="p-4 xs:p-6 bg-white dark:bg-gray-700 rounded-xl shadow">
+      <h3 class="text-lg xs:text-xl font-semibold">Web Developer – ABC Technologies</h3>
+      <p class="text-gray-600 dark:text-gray-300 text-sm xs:text-base">Jun 2020 – Dec 2021</p>
+      <p class="mt-2 text-gray-700 dark:text-gray-400 text-sm xs:text-base">
+        Developed e-commerce websites with PHP, MySQL, and React. Improved UI/UX with responsive design.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 
-        <!-- Hero Start -->
-        <div class="hero" id="home">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="hero-content">
-                            <div class="hero-text">
-                                <p>I'm</p>
-                                <h1>Manish Gahlot</h1>
-                                <h2></h2>
-                                <div class="typed-text">Web developer, App developer, Team leader</div>
-                            </div>
-                            <div class="hero-btn">
-                                <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=gahlotmmanish@gmail.com" target="_blank">Hire Me</a>
-                                <a class="btn" href="https://join.skype.com/invite/uMQ0hgbVJEBg">Contact Me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 d-none d-md-block">
-                        <div class="hero-image">
-                            <img src="img/hero.png" alt="Hero Image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hero End -->
+  <!-- Skills -->
+  <section id="skills" class="py-16 xs:py-20 px-4 fade-in">
+    <h2 class="text-2xl xs:text-3xl font-bold text-center mb-8 xs:mb-10">My Skills</h2>
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div><div class="flex justify-between mb-1 text-sm xs:text-base"><span>Laravel</span><span>90%</span></div><div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 xs:h-3"><div class="bg-blue-500 h-2 xs:h-3 rounded-full" style="width:90%"></div></div></div>
+      <div><div class="flex justify-between mb-1 text-sm xs:text-base"><span>PHP</span><span>85%</span></div><div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 xs:h-3"><div class="bg-blue-500 h-2 xs:h-3 rounded-full" style="width:85%"></div></div></div>
+      <div><div class="flex justify-between mb-1 text-sm xs:text-base"><span>React</span><span>80%</span></div><div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 xs:h-3"><div class="bg-blue-500 h-2 xs:h-3 rounded-full" style="width:80%"></div></div></div>
+      <div><div class="flex justify-between mb-1 text-sm xs:text-base"><span>MySQL</span><span>75%</span></div><div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 xs:h-3"><div class="bg-blue-500 h-2 xs:h-3 rounded-full" style="width:75%"></div></div></div>
+    </div>
+  </section>
 
+  <!-- Services -->
+  <section id="services" class="py-16 xs:py-20 px-4 bg-gray-100 dark:bg-gray-800 fade-in">
+    <h2 class="text-2xl xs:text-3xl font-bold text-center mb-8 xs:mb-10">My Services</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+      <div class="p-4 xs:p-6 bg-white dark:bg-gray-700 rounded-xl shadow hover:scale-105 transition">
+        <h3 class="text-lg xs:text-xl font-semibold mb-2">Web Development</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm xs:text-base">Responsive websites using Laravel, PHP, and TailwindCSS.</p>
+      </div>
+      <div class="p-4 xs:p-6 bg-white dark:bg-gray-700 rounded-xl shadow hover:scale-105 transition">
+        <h3 class="text-lg xs:text-xl font-semibold mb-2">App Development</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm xs:text-base">Modern apps built with React & APIs for iOS and Android.</p>
+      </div>
+      <div class="p-4 xs:p-6 bg-white dark:bg-gray-700 rounded-xl shadow hover:scale-105 transition">
+        <h3 class="text-lg xs:text-xl font-semibold mb-2">UI/UX Design</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm xs:text-base">Clean and attractive designs focusing on user experience.</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- About Start -->
-        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="img/about.png" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-content">
-                            <div class="section-header text-left">
-                                <p>Learn About Me</p>
-                                <h2>2 Years 8 Month Experience</h2>
-                            </div>
-                            <div class="about-text">
-                                <p>
-I specialize in PHP (codeigniter/laravel) And React Native. My extensive 2+ years of experience in various web And App development technologies provide opportunities to make your web site more efficient and stable.
-<br>
-Knowledge about <br> 
-                                </p>
-                            </div>
-                            <div class="skills">
-                                <div class="skill-name">
-                                    <p>Different Architecture [MVC]</p><p>95%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            <div class="skills">
-                                <div class="skill-name">
-                                    <p>PHP or Codeigniter, Laravel  </p><p>95%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-								<div class="skill-name">
-                                    <p>React Native  </p><p>75%</p>
-                                </div>
-								<div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-								<div class="skill-name">
-                                    <p>React Js  </p><p>75%</p>
-                                </div>
-								<div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>Ajaxa, javascript, Angular, Jquery, Bootstrap, CSS,</p><p>98%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>SQL, MongoDB[Database Management]</p><p>90%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>ASP.Net, C#, Analytics, Maps</p><p>97%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>Github, [Code Management]</p><p>96%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>Trello / Skype / Slack [Task management and communication]</p><p>94%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-        
-        
-        <!-- Service Start -->
-        <div class="service" id="service">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>What I do</p>
-                    <h2>Awesome Quality Services</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fab fa-android"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Web development</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fas fa-money-check-alt"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Payment Getways</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-mobile"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Mobile Application</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fas fa-sms"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Sms Getways</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
-        
-        
-         <!-- Experience Start -->
-        <div class="experience" id="experience">
-            <div class="container">
-                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Resume</p>
-                    <h2>Working Experience</h2>
-                </header>
-                <div class="timeline">
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">Current May - 2022</div>
-                            <h2>Web Developer </h2>
-                            <h4>Eagle Technosys Pvt. Ltd (Bikaner, Rajasthan, India)</h4>
-                            <p>
-                                Create Dynamic Web site in Codeigniter And Laravel.
-                            </p>
-							<p>
-                                Create Mobile Application Android And IOS in React Native.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">Mar-2017-Aug-2017</div>
-                            <h2>Web Developer</h2>
-                            <h4>Neologicx Resources india Pvt. Ltd (Bikaner, Rajasthan, India)</h4>
-                            <p>
-                                Create Dynamic web site in Asp.Net.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">June-2016 – Aug-2017</div>
-                            <h2>Android Developer</h2>
-                            <h4>Tech-fi Technology at Delhi</h4>
-                            <p>
-                                Learning Small Application like webview Based Application and upload on google play store.
-                            </p>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <!-- Job Experience End -->
-        
-        
-        <!-- Banner Start -->
-        <div class="banner wow zoomIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Download Resume</p>
-                    <h2>Get A <span>UPDATE</span> Resume</h2>
-                </div>
-                <div class="container banner-text">
-                    <p>
-                        you can download my resume and get more detail about me. 
-                    </p>
-                    <a class="btn" href="resume/MANISH RESUME.pdf">Download Resume</a>
-                </div>
-            </div>
-        </div>
-        <!-- Banner End -->
+  <!-- Projects -->
+  <section id="projects" class="py-16 xs:py-20 px-4 fade-in">
+    <h2 class="text-2xl xs:text-3xl font-bold text-center mb-8 xs:mb-10">Projects</h2>
+    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-gray-100 dark:bg-gray-800 p-4 xs:p-6 rounded-xl shadow hover:scale-105 transition"><img src="https://via.placeholder.com/400x200" class="rounded mb-4 w-full"><h3 class="text-lg xs:text-xl font-semibold">News Portal</h3><p class="text-gray-600 dark:text-gray-400 text-xs xs:text-sm mt-2">Laravel CMS for publishing.</p></div>
+      <div class="bg-gray-100 dark:bg-gray-800 p-4 xs:p-6 rounded-xl shadow hover:scale-105 transition"><img src="https://via.placeholder.com/400x200" class="rounded mb-4 w-full"><h3 class="text-lg xs:text-xl font-semibold">Travel Booking</h3><p class="text-gray-600 dark:text-gray-400 text-xs xs:text-sm mt-2">Online booking with payments.</p></div>
+      <div class="bg-gray-100 dark:bg-gray-800 p-4 xs:p-6 rounded-xl shadow hover:scale-105 transition"><img src="https://via.placeholder.com/400x200" class="rounded mb-4 w-full"><h3 class="text-lg xs:text-xl font-semibold">Admin Dashboard</h3><p class="text-gray-600 dark:text-gray-400 text-xs xs:text-sm mt-2">React analytics dashboard.</p></div>
+    </div>
+  </section>
 
-        <!-- Price Start -->
-        <div class="price" id="price">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Pricing Plan</p>
-                    <h2>Affordable Price</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="price-item">
-                            <div class="price-header">
-                                <div class="price-title">
-                                    <h2>Basic</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h4><small>$</small><strike>49<span>/ hrs</span></strike></h4>
-                                    <h2><small>$</small>19<span>/ hrs</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Blogger website</li>
-                                        <li>Wedding website</li>
-                                        <li>Responsive Design</li>
-                                        <li>Browser Compatibility</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" target="_blank"  href="https://www.paypal.com/paypalme/jeeteshsurana">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="price-item featured-item">
-                            <div class="price-header">
-                                <div class="price-title">
-                                    <h2>Standard</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h4><small>$</small><strike>99<span>/ hrs</span></strike></h4>
-                                    <h2><small>$</small>29<span>/ hrs</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Dynamic Web Site</li>
-                                        <li>Pixel perfect design</li>
-                                        <li>Responsive Design</li>
-                                        <li>Latest Lib</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" target="_blank"  href="https://www.paypal.com/paypalme/jeeteshsurana">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="price-item">
-                            <div class="price-header">
-                                <div class="price-title">
-                                    <h2>Premium</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h4><small>$</small><strike>149<span>/ hrs</span></strike></h4>
-                                    <h2><small>$</small>49<span>/ hrs</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Dynamic web site</li>
-                                        <li>Multi Admin</li>
-                                        <li>Customize Listin</li>
-                                        <li>Mobile and Browser Compatibility</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" target="_blank" href="https://www.paypal.com/paypalme/">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Price End -->
-        
-        
-        <!-- Testimonial Start -->
-        <div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
-            <div class="container">
-                <div class="testimonial-icon">
-                    <i class="fa fa-quote-left"></i>
-                </div>
-                <div class="owl-carousel testimonials-carousel">
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <a href="https://www.linkedin.com/in/suresh-rajpurohit-6b336717b" target="_blank"> <img src="img/suresh.jpg" alt="Image" > </a>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                It is great to work with Manish he is one of the best technical person with whom I have worked. He has very strong analytical skills and problem solving attitude. I and our valued clients both enjoyed working with him for many projects. He has quick understanding skills for complex project scope with technology focused approach and excellent client communication.
-                            </p>
-                            <h3>Suresh</h3>
-                            <h4>Web Developer</h4>
-                        </div>
-                    </div>
-                    <!-- <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <a href="https://www.linkedin.com/in/uttam-bhut-42102910b/" target="_blank"> <img src="img/uttam.jpg" alt="Image"> </a>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Jeetesh Surana is the phrase that comes to mind when I think about Surana. I hired Surana as a Head of Mobile Development Android in 2016 after seeing his online portfolio, He is always a very good communicator, also when the pressure is rising, calling for clear communication about goals, responsibility, performance, expectations, and feedback for every member involved in the project he’s managing. And we still miss him on the office softball league! As a team leader, Surana earns my highest recommendation.
-                            </p>
-                            <h3>Uttam Bhut</h3>
-                            <h4>Sr. UI/UX Designer</h4>
-                        </div>
-                    </div> -->
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <a href="https://www.linkedin.com/in/nikunj-swami-1818a8131" target="_blank"> <img src="img/nikunj.jpg" alt="Image"> </a>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Manish is very passionate and has a great vision for his work. His focus keeps everything moving smoothly, he makes sure all the deadlines are met , and makes sure that whatever project he is working on meets the highest standards, He has Great knowledge of android and unity, love to work with him, Thanks, jeetesh.Abada Ezad.
-                            </p>
-                            <h3>Nikunj Swami</h3>
-                            <h4>Web Developer</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-16 xs:py-20 px-4 bg-gray-100 dark:bg-gray-800 fade-in">
+    <h2 class="text-2xl xs:text-3xl font-bold text-center mb-8 xs:mb-10">Testimonials</h2>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+      <div class="p-4 xs:p-6 bg-white dark:bg-gray-700 rounded-xl shadow">
+        <p class="text-gray-700 dark:text-gray-300 text-sm xs:text-base">"Manish delivered our project on time with excellent quality. Highly recommended!"</p>
+        <h4 class="mt-4 font-semibold text-sm xs:text-base">– Client A</h4>
+      </div>
+      <div class="p-4 xs:p-6 bg-white dark:bg-gray-700 rounded-xl shadow">
+        <p class="text-gray-700 dark:text-gray-300 text-sm xs:text-base">"Very professional developer with great communication and skills."</p>
+        <h4 class="mt-4 font-semibold text-sm xs:text-base">– Client B</h4>
+      </div>
+    </div>
+  </section>
 
+  <!-- Blog -->
+  <section id="blog" class="py-16 xs:py-20 px-4 fade-in">
+    <h2 class="text-2xl xs:text-3xl font-bold text-center mb-8 xs:mb-10">Latest Blog Posts</h2>
+    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="p-4 xs:p-6 bg-gray-100 dark:bg-gray-800 rounded-xl shadow hover:scale-105 transition">
+        <img src="https://via.placeholder.com/400x200" class="rounded mb-4 w-full">
+        <h3 class="text-lg xs:text-xl font-semibold">Getting Started with Laravel</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-xs xs:text-sm mt-2">Learn how to set up a Laravel project step by step.</p>
+        <a href="#" class="text-blue-500 hover:underline mt-3 block text-sm xs:text-base">Read More →</a>
+      </div>
+      <div class="p-4 xs:p-6 bg-gray-100 dark:bg-gray-800 rounded-xl shadow hover:scale-105 transition">
+        <img src="https://via.placeholder.com/400x200" class="rounded mb-4 w-full">
+        <h3 class="text-lg xs:text-xl font-semibold">React vs Vue</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-xs xs:text-sm mt-2">Comparison between React and Vue for front-end devs.</p>
+        <a href="#" class="text-blue-500 hover:underline mt-3 block text-sm xs:text-base">Read More →</a>
+      </div>
+      <div class="p-4 xs:p-6 bg-gray-100 dark:bg-gray-800 rounded-xl shadow hover:scale-105 transition">
+        <img src="https://via.placeholder.com/400x200" class="rounded mb-4 w-full">
+        <h3 class="text-lg xs:text-xl font-semibold">Mastering MySQL Queries</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-xs xs:text-sm mt-2">Tips and tricks for writing optimized SQL queries.</p>
+        <a href="#" class="text-blue-500 hover:underline mt-3 block text-sm xs:text-base">Read More →</a>
+      </div>
+    </div>
+  </section>
 
-        <!-- Team Start -->
-        <div class="team" id="team">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>PortFolio</p>
-                    <h2>Developed Apps-web</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/b2bpro.png" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Alibaba Clone</h2>
-                                <h4>codeigniter</h4>
-                                <p>
-                                    Using Compatibility <br>
-                                     • Ajaxa <br>
-                                     • jQuery<br> 
-                                     • SQL, DataBase <br>
-                                     • GitHub (code management)
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/index1.png" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Samaj Web</h2>
-                                <h4>Laravel</h4>
-                                <p>
-                                    Using Compatibility<br>
-                                     • Angularjs <br>
-                                     • Ajaxa<br> 
-                                     • jquery <br>
-                                     • SQL, DataBase <br>
-                                     • GitHub (code management) <br>
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-blogger-b"></i></a>
-                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-blogger-b"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/courier.png" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>OneDay Courier</h2>
-                                <h4>codeigniter</h4>
-                                <p>
-                                    Using Compatibility <br>
-                                     • Ajaxa <br>
-                                     • jQuery<br> 
-                                     • SQL, DataBase <br>
-                                     • GitHub (code management)
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/indiakmanufacturers_b2bv4.png" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Indiakmanufacturers</h2>
-                                <h4>codeigniter</h4>
-                                <p>
-                                    Using Compatibility <br>
-                                     • Ajaxa <br>
-                                     • jQuery<br> 
-                                     • SQL, DataBase <br>
-                                     • GitHub (code management)
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/egy.png" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>EgyExporter</h2>
-                                <h4>codeigniter</h4>
-                                <p>
-                                    Using Compatibility <br>
-                                     • Ajaxa <br>
-                                     • jQuery<br> 
-                                     • SQL, DataBase <br>
-                                     • GitHub (code management)
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/qralink.png" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Qralink</h2>
-                                <h4>codeigniter</h4>
-                                <p>
-                                    Using Compatibility <br>
-                                     • Ajaxa <br>
-                                     • jQuery<br> 
-                                     • SQL, DataBase <br>
-                                     • GitHub (code management)
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/b2bhulk.png" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>B2b Hulk</h2>
-                                <h4>codeigniter</h4>
-                                <p>
-                                    Using Compatibility <br>
-                                     • Ajaxa <br>
-                                     • jQuery<br> 
-                                     • SQL, DataBase <br>
-                                     • GitHub (code management)
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/sellsbuy.png" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Sellsbuy</h2>
-                                <h4>React Js</h4>
-                                <p>
-                                    Using Compatibility <br> 
-                                     • SQL, DataBase <br>
-                                     • GitHub (code management)
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
+  <!-- Contact -->
+  <section id="contact" class="py-16 xs:py-20 px-4 fade-in">
+    <h2 class="text-2xl xs:text-3xl font-bold text-center mb-6 xs:mb-8">Contact Me</h2>
+    <form class="max-w-2xl mx-auto space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white text-sm xs:text-base">
+      <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white text-sm xs:text-base">
+      <textarea placeholder="Your Message" class="w-full px-4 py-3 rounded bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white text-sm xs:text-base" rows="5"></textarea>
+      <button class="w-full bg-blue-500 hover:bg-blue-600 py-3 rounded text-white text-sm xs:text-base">Send Message</button>
+    </form>
+  </section>
 
-        <!-- Footer Start -->
-        <div class="footer wow fadeIn" data-wow-delay="0.3s">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="footer-info">
-                        <h2>Manish Gahlot</h2>
-                        <h3>Bikaner, Rajasthan, India</h3>
-                        <div class="footer-menu">
-                            <p>+91 9414905105</p>
-                        </div>
-                        <div class="footer-menu">
-                            <p>+91 9530215757</p>
-                        </div>
-                        <div class="footer-menu">
-                            <p>gahlotmmanish@gmail.com</p>
-                        </div>
-                        <div class="footer-social">
-                            <a target="_blank" href="https://twitter.com/ManishG81068775"><i class="fab fa-twitter"></i></a>
-                            <!-- <a target="_blank" href="https://www.facebook.com/jeeteshsurana"><i class="fab fa-facebook-f"></i></a> -->
-                            <!-- <a target="_blank" href="https://www.youtube.com/channel/UCrTAgL1_vG7XoFLn0L5fYfw"><i class="fab fa-youtube"></i></a> -->
-                            <!-- <a target="_blank" href="https://www.instagram.com/jeeteshsurana/?hl=en"><i class="fab fa-instagram"></i></a> -->
-                            <a target="_blank" href="https://www.linkedin.com/in/manish-gahlot-573546139"><i class="fab fa-linkedin-in"></i></a>
-                            <!-- <a target="_blank" href="https://github.com/jeeteshsurana"><i class="fab fa-github"></i></a> -->
-                            <!-- <a target="_blank" href="https://in.pinterest.com/jeeteshsurana/"><i class="fab fa-pinterest"></i></a> -->
-                            <!-- <a target="_blank" href="https://in.pinterest.com/jeeteshsurana/"><i class="fab fa-telegram"></i></a> -->
-                            <!-- <a target="_blank" href="https://play.google.com/store/apps/developer?id=Kiddo+App+Development+Company"><i class="fab fa-google-play"></i></a> -->
-                            <!-- <a target="_blank" href="https://paypal.me/jeeteshsurana"><i class="fab fa-cc-paypal"></i></a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <p>&copy; <a href="#">Manish Gahlot</a>, All Right Reserved | Designed By <a href="">Manish Gahlot</a></p>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-        
-        
-        <!-- Back to top button -->
-        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
-        
-        
-        <!-- Pre Loader -->
-        <div id="loader" class="show">
-            <div class="loader"></div>
-        </div>
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-200 dark:bg-gray-900 text-gray-600 dark:text-gray-400 px-4">
+    <div class="flex flex-wrap justify-center gap-4 mb-4">
+      <a href="https://github.com/yourusername" target="_blank" class="hover:text-blue-500 text-sm xs:text-base">🐙 GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-blue-500 text-sm xs:text-base">💼 LinkedIn</a>
+      <a href="https://twitter.com/yourusername" target="_blank" class="hover:text-blue-500 text-sm xs:text-base">🐦 Twitter</a>
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="hover:text-green-500 text-sm xs:text-base">📱 WhatsApp</a>
+    </div>
+    <p class="text-sm xs:text-base">© 2025 Manish – All Rights Reserved</p>
+  </footer>
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/typed/typed.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+  <!-- Back to Top -->
+  <button id="backToTop" class="hidden fixed bottom-6 right-6 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full shadow text-sm">⬆️</button>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+  <!-- JS -->
+  <script>
+    // Theme toggle functionality
+    const toggleBtn = document.getElementById("themeToggle");
+    const toggleBtnMobile = document.getElementById("themeToggleMobile");
+    const html = document.documentElement;
+    
+    const toggleTheme = () => {
+      html.classList.toggle("dark");
+      const isDark = html.classList.contains("dark");
+      toggleBtn.textContent = isDark ? "☀️" : "🌙";
+      if (toggleBtnMobile) {
+        toggleBtnMobile.textContent = isDark ? "☀️" : "🌙";
+      }
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    };
+    
+    toggleBtn.addEventListener("click", toggleTheme);
+    if (toggleBtnMobile) {
+      toggleBtnMobile.addEventListener("click", toggleTheme);
+    }
+    
+    // Check for saved theme preference
+    if (localStorage.getItem("theme") === "dark") {
+      html.classList.add("dark");
+      toggleBtn.textContent = "☀️";
+      if (toggleBtnMobile) toggleBtnMobile.textContent = "☀️";
+    } else {
+      html.classList.remove("dark");
+      toggleBtn.textContent = "🌙";
+      if (toggleBtnMobile) toggleBtnMobile.textContent = "🌙";
+    }
+    
+    // Mobile menu functionality
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("open");
+      mobileMenu.classList.toggle("open");
+      
+      // Prevent body scrolling when menu is open
+      if (mobileMenu.classList.contains("open")) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+    });
+    
+    // Close mobile menu when clicking on links
+    const mobileLinks = document.querySelectorAll("#mobileMenu a");
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("open");
+        mobileMenu.classList.remove("open");
+        document.body.style.overflow = "auto";
+      });
+    });
+    
+    // Intersection Observer for fade-in animations
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+    
+    // Back to top button
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) backToTop.classList.remove("hidden");
+      else backToTop.classList.add("hidden");
+    });
+    backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  </script>
+
+</body>
 </html>
