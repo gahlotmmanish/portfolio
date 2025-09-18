@@ -1,1 +1,697 @@
-ddd
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Manish Gahlot - Web Developer And App Developer</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Manish Gahlot" name="keywords">
+        <meta content="Manish Gahlot" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link rel = "icon" href ="img/mobile_phone.png" type = "image/x-icon"> 
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">Portfolio</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#service" class="nav-item nav-link">Service</a>
+                        <a href="#experience" class="nav-item nav-link">Experience</a>
+                        <a href="#price" class="nav-item nav-link">Price</a>
+                        <a href="#review" class="nav-item nav-link">Review</a>
+                        <a href="#team" class="nav-item nav-link">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+
+        <!-- Hero Start -->
+        <div class="hero" id="home">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <p>I'm</p>
+                                <h1>Manish Gahlot</h1>
+                                <h2></h2>
+                                <div class="typed-text">Web developer, App developer, Team leader</div>
+                            </div>
+                            <div class="hero-btn">
+                                <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=gahlotmmanish@gmail.com" target="_blank">Hire Me</a>
+                                <a class="btn" href="https://join.skype.com/invite/uMQ0hgbVJEBg">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-none d-md-block">
+                        <div class="hero-image">
+                            <img src="img/hero.png" alt="Hero Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+
+        <!-- About Start -->
+        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-img">
+                            <img src="img/about.png" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-header text-left">
+                                <p>Learn About Me</p>
+                                <h2>2 Years 8 Month Experience</h2>
+                            </div>
+                            <div class="about-text">
+                                <p>
+I specialize in PHP (codeigniter/laravel) And React Native. My extensive 2+ years of experience in various web And App development technologies provide opportunities to make your web site more efficient and stable.
+<br>
+Knowledge about <br> 
+                                </p>
+                            </div>
+                            <div class="skills">
+                                <div class="skill-name">
+                                    <p>Different Architecture [MVC]</p><p>95%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            <div class="skills">
+                                <div class="skill-name">
+                                    <p>PHP or Codeigniter, Laravel  </p><p>95%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+								<div class="skill-name">
+                                    <p>React Native  </p><p>75%</p>
+                                </div>
+								<div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+								<div class="skill-name">
+                                    <p>React Js  </p><p>75%</p>
+                                </div>
+								<div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="skill-name">
+                                    <p>Ajaxa, javascript, Angular, Jquery, Bootstrap, CSS,</p><p>98%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="skill-name">
+                                    <p>SQL, MongoDB[Database Management]</p><p>90%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="skill-name">
+                                    <p>ASP.Net, C#, Analytics, Maps</p><p>97%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="skill-name">
+                                    <p>Github, [Code Management]</p><p>96%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="skill-name">
+                                    <p>Trello / Skype / Slack [Task management and communication]</p><p>94%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+        
+        <!-- Service Start -->
+        <div class="service" id="service">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>What I do</p>
+                    <h2>Awesome Quality Services</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Web development</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-money-check-alt"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Payment Getways</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fa fa-mobile"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Mobile Application</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-sms"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Sms Getways</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+        
+        
+         <!-- Experience Start -->
+        <div class="experience" id="experience">
+            <div class="container">
+                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>My Resume</p>
+                    <h2>Working Experience</h2>
+                </header>
+                <div class="timeline">
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">Current May - 2022</div>
+                            <h2>Web Developer </h2>
+                            <h4>Eagle Technosys Pvt. Ltd (Bikaner, Rajasthan, India)</h4>
+                            <p>
+                                Create Dynamic Web site in Codeigniter And Laravel.
+                            </p>
+							<p>
+                                Create Mobile Application Android And IOS in React Native.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">Mar-2017-Aug-2017</div>
+                            <h2>Web Developer</h2>
+                            <h4>Neologicx Resources india Pvt. Ltd (Bikaner, Rajasthan, India)</h4>
+                            <p>
+                                Create Dynamic web site in Asp.Net.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">June-2016 – Aug-2017</div>
+                            <h2>Android Developer</h2>
+                            <h4>Tech-fi Technology at Delhi</h4>
+                            <p>
+                                Learning Small Application like webview Based Application and upload on google play store.
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Job Experience End -->
+        
+        
+        <!-- Banner Start -->
+        <div class="banner wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Download Resume</p>
+                    <h2>Get A <span>UPDATE</span> Resume</h2>
+                </div>
+                <div class="container banner-text">
+                    <p>
+                        you can download my resume and get more detail about me. 
+                    </p>
+                    <a class="btn" href="resume/MANISH RESUME.pdf">Download Resume</a>
+                </div>
+            </div>
+        </div>
+        <!-- Banner End -->
+
+        <!-- Price Start -->
+        <div class="price" id="price">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Pricing Plan</p>
+                    <h2>Affordable Price</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="price-item">
+                            <div class="price-header">
+                                <div class="price-title">
+                                    <h2>Basic</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h4><small>$</small><strike>49<span>/ hrs</span></strike></h4>
+                                    <h2><small>$</small>19<span>/ hrs</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Blogger website</li>
+                                        <li>Wedding website</li>
+                                        <li>Responsive Design</li>
+                                        <li>Browser Compatibility</li>
+                                        <li>Easy To Use</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" target="_blank"  href="https://www.paypal.com/paypalme/jeeteshsurana">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="price-item featured-item">
+                            <div class="price-header">
+                                <div class="price-title">
+                                    <h2>Standard</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h4><small>$</small><strike>99<span>/ hrs</span></strike></h4>
+                                    <h2><small>$</small>29<span>/ hrs</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Dynamic Web Site</li>
+                                        <li>Pixel perfect design</li>
+                                        <li>Responsive Design</li>
+                                        <li>Latest Lib</li>
+                                        <li>Easy To Use</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" target="_blank"  href="https://www.paypal.com/paypalme/jeeteshsurana">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="price-item">
+                            <div class="price-header">
+                                <div class="price-title">
+                                    <h2>Premium</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h4><small>$</small><strike>149<span>/ hrs</span></strike></h4>
+                                    <h2><small>$</small>49<span>/ hrs</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Dynamic web site</li>
+                                        <li>Multi Admin</li>
+                                        <li>Customize Listin</li>
+                                        <li>Mobile and Browser Compatibility</li>
+                                        <li>Easy To Use</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" target="_blank" href="https://www.paypal.com/paypalme/">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Price End -->
+        
+        
+        <!-- Testimonial Start -->
+        <div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
+            <div class="container">
+                <div class="testimonial-icon">
+                    <i class="fa fa-quote-left"></i>
+                </div>
+                <div class="owl-carousel testimonials-carousel">
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <a href="https://www.linkedin.com/in/suresh-rajpurohit-6b336717b" target="_blank"> <img src="img/suresh.jpg" alt="Image" > </a>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                It is great to work with Manish he is one of the best technical person with whom I have worked. He has very strong analytical skills and problem solving attitude. I and our valued clients both enjoyed working with him for many projects. He has quick understanding skills for complex project scope with technology focused approach and excellent client communication.
+                            </p>
+                            <h3>Suresh</h3>
+                            <h4>Web Developer</h4>
+                        </div>
+                    </div>
+                    <!-- <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <a href="https://www.linkedin.com/in/uttam-bhut-42102910b/" target="_blank"> <img src="img/uttam.jpg" alt="Image"> </a>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                Jeetesh Surana is the phrase that comes to mind when I think about Surana. I hired Surana as a Head of Mobile Development Android in 2016 after seeing his online portfolio, He is always a very good communicator, also when the pressure is rising, calling for clear communication about goals, responsibility, performance, expectations, and feedback for every member involved in the project he’s managing. And we still miss him on the office softball league! As a team leader, Surana earns my highest recommendation.
+                            </p>
+                            <h3>Uttam Bhut</h3>
+                            <h4>Sr. UI/UX Designer</h4>
+                        </div>
+                    </div> -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <a href="https://www.linkedin.com/in/nikunj-swami-1818a8131" target="_blank"> <img src="img/nikunj.jpg" alt="Image"> </a>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                Manish is very passionate and has a great vision for his work. His focus keeps everything moving smoothly, he makes sure all the deadlines are met , and makes sure that whatever project he is working on meets the highest standards, He has Great knowledge of android and unity, love to work with him, Thanks, jeetesh.Abada Ezad.
+                            </p>
+                            <h3>Nikunj Swami</h3>
+                            <h4>Web Developer</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Team Start -->
+        <div class="team" id="team">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>PortFolio</p>
+                    <h2>Developed Apps-web</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/b2bpro.png" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Alibaba Clone</h2>
+                                <h4>codeigniter</h4>
+                                <p>
+                                    Using Compatibility <br>
+                                     • Ajaxa <br>
+                                     • jQuery<br> 
+                                     • SQL, DataBase <br>
+                                     • GitHub (code management)
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/index1.png" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Samaj Web</h2>
+                                <h4>Laravel</h4>
+                                <p>
+                                    Using Compatibility<br>
+                                     • Angularjs <br>
+                                     • Ajaxa<br> 
+                                     • jquery <br>
+                                     • SQL, DataBase <br>
+                                     • GitHub (code management) <br>
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-blogger-b"></i></a>
+                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-blogger-b"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/courier.png" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>OneDay Courier</h2>
+                                <h4>codeigniter</h4>
+                                <p>
+                                    Using Compatibility <br>
+                                     • Ajaxa <br>
+                                     • jQuery<br> 
+                                     • SQL, DataBase <br>
+                                     • GitHub (code management)
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/indiakmanufacturers_b2bv4.png" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Indiakmanufacturers</h2>
+                                <h4>codeigniter</h4>
+                                <p>
+                                    Using Compatibility <br>
+                                     • Ajaxa <br>
+                                     • jQuery<br> 
+                                     • SQL, DataBase <br>
+                                     • GitHub (code management)
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/egy.png" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>EgyExporter</h2>
+                                <h4>codeigniter</h4>
+                                <p>
+                                    Using Compatibility <br>
+                                     • Ajaxa <br>
+                                     • jQuery<br> 
+                                     • SQL, DataBase <br>
+                                     • GitHub (code management)
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/qralink.png" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Qralink</h2>
+                                <h4>codeigniter</h4>
+                                <p>
+                                    Using Compatibility <br>
+                                     • Ajaxa <br>
+                                     • jQuery<br> 
+                                     • SQL, DataBase <br>
+                                     • GitHub (code management)
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/b2bhulk.png" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>B2b Hulk</h2>
+                                <h4>codeigniter</h4>
+                                <p>
+                                    Using Compatibility <br>
+                                     • Ajaxa <br>
+                                     • jQuery<br> 
+                                     • SQL, DataBase <br>
+                                     • GitHub (code management)
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/sellsbuy.png" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Sellsbuy</h2>
+                                <h4>React Js</h4>
+                                <p>
+                                    Using Compatibility <br> 
+                                     • SQL, DataBase <br>
+                                     • GitHub (code management)
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" target="_blank" href="http://bit.ly/manishportfolio"><i class="fab fa-google-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <h2>Manish Gahlot</h2>
+                        <h3>Bikaner, Rajasthan, India</h3>
+                        <div class="footer-menu">
+                            <p>+91 9414905105</p>
+                        </div>
+                        <div class="footer-menu">
+                            <p>+91 9530215757</p>
+                        </div>
+                        <div class="footer-menu">
+                            <p>gahlotmmanish@gmail.com</p>
+                        </div>
+                        <div class="footer-social">
+                            <a target="_blank" href="https://twitter.com/ManishG81068775"><i class="fab fa-twitter"></i></a>
+                            <!-- <a target="_blank" href="https://www.facebook.com/jeeteshsurana"><i class="fab fa-facebook-f"></i></a> -->
+                            <!-- <a target="_blank" href="https://www.youtube.com/channel/UCrTAgL1_vG7XoFLn0L5fYfw"><i class="fab fa-youtube"></i></a> -->
+                            <!-- <a target="_blank" href="https://www.instagram.com/jeeteshsurana/?hl=en"><i class="fab fa-instagram"></i></a> -->
+                            <a target="_blank" href="https://www.linkedin.com/in/manish-gahlot-573546139"><i class="fab fa-linkedin-in"></i></a>
+                            <!-- <a target="_blank" href="https://github.com/jeeteshsurana"><i class="fab fa-github"></i></a> -->
+                            <!-- <a target="_blank" href="https://in.pinterest.com/jeeteshsurana/"><i class="fab fa-pinterest"></i></a> -->
+                            <!-- <a target="_blank" href="https://in.pinterest.com/jeeteshsurana/"><i class="fab fa-telegram"></i></a> -->
+                            <!-- <a target="_blank" href="https://play.google.com/store/apps/developer?id=Kiddo+App+Development+Company"><i class="fab fa-google-play"></i></a> -->
+                            <!-- <a target="_blank" href="https://paypal.me/jeeteshsurana"><i class="fab fa-cc-paypal"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; <a href="#">Manish Gahlot</a>, All Right Reserved | Designed By <a href="">Manish Gahlot</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
